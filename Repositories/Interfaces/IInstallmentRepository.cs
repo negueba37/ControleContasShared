@@ -18,6 +18,7 @@ namespace Shared.Data.Repositories.Interfaces
         IEnumerable<InstallmentDTO> GetByMonthMaturity(int month, int year);
 		InstallmentDTO GetById(int id);
 		void Update(InstallmentDTO installmentDTO);
+		
 
 	}
 }

@@ -14,5 +14,6 @@ namespace ControleContasData.Domain
         public DateTime Due { get; set; }
 		public bool IsPaid { get; set; }
 		public int BankSlipId { get; set; }
+        
 	}
 }

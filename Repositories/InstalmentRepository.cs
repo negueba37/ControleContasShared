@@ -44,14 +44,15 @@ namespace Shared.Data.Repositories
             using (var connection = DatabaseConnection.Connection())
             {
                 connection.Open();
-                string sql = "Update public.\"Installments\" set \"Price\" = @Price ,\"Due\" = @Due" +
+                string sql = "Update public.\"Installments\" set \"Price\" = @Price ,\"Due\" = @Due, \"IsPaid\" = @IsPaid" +
                     " where \"Id\" = @Id";
                 using (var cmd = new NpgsqlCommand(sql, connection))
                 {
                     cmd.Parameters.AddWithValue("@Id", installmentDTO.Id);
                     cmd.Parameters.AddWithValue("@Price", installmentDTO.Price);
                     cmd.Parameters.AddWithValue("@Due", installmentDTO.Due);
-                    using (var reader = cmd.ExecuteReader());
+					cmd.Parameters.AddWithValue("@IsPaid", installmentDTO.IsPaid);
+					using (var reader = cmd.ExecuteReader());
                 }
                 connection.Close();
             }
