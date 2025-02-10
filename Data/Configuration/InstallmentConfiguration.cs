@@ -16,6 +16,8 @@ namespace ControleContasData.Data.Configuration
 				builder.HasKey(p => p.Id);
 				builder.Property(p => p.Due).HasColumnType("Date").IsRequired();
 				builder.Property(p => p.Price).IsRequired();
+				builder.Property(p => p.BankSlipId).IsRequired(false);
+				builder.Property(p => p.AccountId).IsRequired(false);
 
 			}
 		}

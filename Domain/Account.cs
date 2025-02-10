@@ -13,8 +13,8 @@ namespace ControleContas.Domain
         public int? CardId { get; set; }
         public Card? Card { get; set; }
         public int UserId { get; set; }
-		public User? User { get; set; }        
-        public ICollection<Installment>? Installments { get; set; }
+		public User? User { get; set; }
+        public ICollection<Installment>? Installments { get; set; } = [];
         public int InstallmentQuantity { get; set; }
         
 

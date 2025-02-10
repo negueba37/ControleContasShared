@@ -21,6 +21,7 @@ namespace ControleContas.Data
 		public DbSet<User> User { get; set; } = default!;
 		public DbSet<Installment> Installment { get; set; } = default!;
 		public DbSet<ConfigurationParameters> ConfigurationParameters { get; set; } = default!;
+		public DbSet<Category> Category { get; set; } = default!;
 		
 	}
 }
